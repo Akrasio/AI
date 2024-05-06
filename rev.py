@@ -18,7 +18,7 @@ bad_words = bad_wod.split(", ")
 
 class Client(revolt.Client):
     async def on_message(self, message: revolt.Message):
-        if message.author.bot:
+        if message.system_content or message.author.bot:
             return
         if len(message.raw_mentions) == 1 and message.raw_mentions[0] == self.user.id:
             prompt = message.content.replace(f"<@{message.raw_mentions[0]}>", "")
