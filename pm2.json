@@ -1,7 +1,7 @@
 {
     "apps":[{
 	"name": "Ai",
-	"script": "bot.py",
+	"script": "main.py",
 	"interpreter": "python3.10",
 	"interpreter_args": "-u"
     }]
