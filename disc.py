@@ -31,9 +31,6 @@ async def run_discord(controller: AIC):
     async def on_message(event: hikari.GuildMessageCreateEvent):
         if event.message.author.is_bot:
             return
-        if event.message.channel_id == 1240127564895490082:
-            print(event.message)
-            return this.send_revolt(event.message.content, event.message.author)
 
         if event.message.channel_id == int(config.get("AI_CHANNEL")):
             if event.message.content == "":
